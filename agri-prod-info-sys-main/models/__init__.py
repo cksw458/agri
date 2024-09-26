@@ -7,6 +7,8 @@ from infra.password import create_salt, hash_password
 Base = declarative_base()
 """declarative_base()"""
 
+SQLALCHEMY_DATABASE_URI = 'mysql+mysqlconnector://root:123456@127.0.0.1/old_care?charset=utf8&auth_plugin=mysql_native_password'
+DATABASE_CONNECT_OPTIONS = {}
 
 class MUser(Base):
     """用户"""
